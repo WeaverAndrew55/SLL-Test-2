@@ -1,0 +1,72 @@
+[
+  {
+    "fields": [
+      {
+        "name": "title",
+        "type": "string",
+        "title": "Page Title"
+      },
+      {
+        "name": "description",
+        "type": "text",
+        "title": "Page Description"
+      },
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "name": "sectionId",
+                "type": "string",
+                "title": "Section ID"
+              },
+              {
+                "name": "title",
+                "type": "string",
+                "title": "Section Title"
+              },
+              {
+                "name": "description",
+                "type": "text",
+                "title": "Section Description"
+              },
+              {
+                "name": "image",
+                "type": "image",
+                "title": "Section Image"
+              },
+              {
+                "of": [
+                  {
+                    "fields": [
+                      {
+                        "name": "itemTitle",
+                        "type": "string"
+                      },
+                      {
+                        "name": "itemDescription",
+                        "type": "text"
+                      },
+                      {
+                        "name": "itemImage",
+                        "type": "image"
+                      }
+                    ],
+                    "type": "object"
+                  }
+                ],
+                "name": "items",
+                "type": "array"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "sections",
+        "type": "array"
+      }
+    ],
+    "name": "page",
+    "type": "document"
+  }
+]
